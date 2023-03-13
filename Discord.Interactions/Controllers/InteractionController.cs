@@ -7,14 +7,14 @@ namespace Discord.F2.Controllers
     [Route("[controller]")]
     public class InteractionController : ControllerBase
     {
-        private readonly RequestHandler requestHandler;
+        private readonly DiscordRequestHandler requestHandler;
 
-        public InteractionController(RequestHandler requestHandler)
+        public InteractionController(DiscordRequestHandler requestHandler)
         {
             this.requestHandler = requestHandler;
         }
 
-        [HttpPost]
-        public async Task<IActionResult> HandlerAsync() => await this.requestHandler.HandlerAsync(Request);
+        [HttpPost("handler")]
+        public async Task<IActionResult> HandlerAsync() => await this.requestHandler.ImmediateHandlerAsync(Request);
     }
 }
