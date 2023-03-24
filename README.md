@@ -5,6 +5,10 @@ It is meant to give information of the current F1 schedule.
 - It gets the F1 info from the [Ergast API](http://ergast.com/mrd/).
 - For Discord functionality, it depends on [Discord.Core](https://github.com/laczbali/Discord.Core).
 
+# Bugs and Feature Requests
+- The current deployment to AWS Lambda consistently causes Discord interaction timeouts, due to the spinup time
+- It would be nice to have some info on the current date in the `f1-next` and `f1-schedule` interactions
+
 # Developer Guide
 **Prerequisites**
 - Visual Studio with web development tools installed
