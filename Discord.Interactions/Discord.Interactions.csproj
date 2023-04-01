@@ -14,7 +14,7 @@
     <PackageReference Include="Amazon.Lambda.AspNetCoreServer.Hosting" Version="1.4.0" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Discord.Core\Discord.Core.csproj" />
+    <ProjectReference Include="..\Discord.Core\Discord.Core.csproj" />
     <ProjectReference Include="..\Egast.API\Egast.API.csproj" />
   </ItemGroup>
 </Project>

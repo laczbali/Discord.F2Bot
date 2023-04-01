@@ -1,0 +1,3 @@
+[submodule "Discord.Core"]
+	path = Discord.Core
+	url = https://github.com/laczbali/Discord.Core
