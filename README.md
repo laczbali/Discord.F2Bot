@@ -7,7 +7,6 @@ It is meant to give information of the current F1 schedule.
 
 # Bugs and Feature Requests
 - The current deployment to AWS Lambda consistently causes Discord interaction timeouts, due to the spinup time
-- It would be nice to have some info on the current date in the `f1-next` and `f1-schedule` interactions
 
 # Developer Guide
 **Prerequisites**

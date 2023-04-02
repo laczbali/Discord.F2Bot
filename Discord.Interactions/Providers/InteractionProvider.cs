@@ -40,7 +40,7 @@ namespace Discord.F2.Providers
                     var nextRace = await this.ergastAPI.GetNextRace();
                     var nextRaceDateTime = TimeZoneInfo.ConvertTimeFromUtc(nextRace.DateTime, this.config.TargetTimezone);
 
-					var response = $"The next event is **{nextRace.RaceName}** on **{nextRaceDateTime.ToShortDateString()}** at **{nextRaceDateTime:HH:mm}**";
+					var response = $"The next event is **{nextRace.RaceName}** on **{nextRaceDateTime.ToString("yyyy.MM.dd")}** at **{nextRaceDateTime:HH:mm}**\n({(nextRace.DateTime-DateTime.UtcNow).TotalDays:0} days from today)";
 
                     return response;
 				}),
@@ -103,16 +103,18 @@ namespace Discord.F2.Providers
                 "Shows the schedule of the current season",
                 async (Interaction interaction) =>
                 {
-                    var schedule = await this.ergastAPI.GetSchedule();
+					var nextEvent = await this.ergastAPI.GetNextRace();
+					var schedule = await this.ergastAPI.GetSchedule();
                     var raceStrings = schedule.Select(race =>
                     {
                         var convertedDateTime = TimeZoneInfo.ConvertTimeFromUtc(race.DateTime, this.config.TargetTimezone);
-						return $"{convertedDateTime:yyyy.MM.dd - HH:mm} - {race.RaceName}";
-					});
+                        return $"{convertedDateTime:yyyy.MM.dd - HH:mm} - {race.RaceName}";
+                    });
 
-					var response = string.Join("\n", raceStrings);
+                    var response = string.Join("\n", raceStrings);
 
                     response = $"**The full schedule of the current season is**\n```" + response + "```";
+                    response = response + "\n" + $"The next race is {(nextEvent.DateTime-DateTime.UtcNow).TotalDays:0} days from now";
 
                     return response;
                 })
