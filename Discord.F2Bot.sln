@@ -14,8 +14,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Egast.API", "Egast.API\Egas
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Discord.Core", "Discord.Core\Discord.Core.csproj", "{C8C5C77D-BEBD-415A-9A7F-8FBEBCA30B64}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blaczko.Core", "Discord.Core\Blaczko.Core\Blaczko.Core.csproj", "{62967ED2-0B24-4A03-8864-E073AD319A4E}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -34,16 +32,9 @@ Global
 		{C8C5C77D-BEBD-415A-9A7F-8FBEBCA30B64}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C8C5C77D-BEBD-415A-9A7F-8FBEBCA30B64}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C8C5C77D-BEBD-415A-9A7F-8FBEBCA30B64}.Release|Any CPU.Build.0 = Release|Any CPU
-		{62967ED2-0B24-4A03-8864-E073AD319A4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{62967ED2-0B24-4A03-8864-E073AD319A4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{62967ED2-0B24-4A03-8864-E073AD319A4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{62967ED2-0B24-4A03-8864-E073AD319A4E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{62967ED2-0B24-4A03-8864-E073AD319A4E} = {3656D3BE-2E09-4455-AD9B-A1D2D4BD2E2C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E0A7B943-65E8-4582-A2C2-D282CFC9DEDB}
